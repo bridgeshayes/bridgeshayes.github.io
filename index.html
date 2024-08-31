@@ -10,48 +10,70 @@
     <title>Matthew 7:25 Services</title>
 </head>
 
-<body>
+<body class="bg-white">
     <!--Basic template code from Bootstrap docs to get a navbar going-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+    <div id="main">
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            style="font-size: 20px; margin-left: 10%;">Home</a>
+                        <a class="nav-link" href="#" style="font-size: 20px;">Loans</a>
+                        <a class="nav-link" href="#" style="font-size: 20px;">Pricing</a>
+                        <a class="nav-link" href="#" style="font-size: 20px;">Contact</a>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <img src="assets/images/company logojpg.jpg" alt="Matthew 7:25 Services"
+                            style="width: 20%; height: auto;" class="img-fluid">
+                    </div>
+                </div>
             </div>
+        </nav>
+        <div style="background-color: #245388; padding: 40px;"><!--Blue Ribbon--></div>
+        <!--Main content starts here-->
+        <!--IMPLEMENT CAROUSEL OF STOCK BEFORE/AFTER IMAGES HERE-->
+        <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            style="background-color: rgb(210, 206, 168);">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-color: rgb(210, 206, 168);">
+                    <img src="assets/images/beforeAfter.png" alt="" style="height: 450px; width: auto;">
+                    <div class="carousel-caption">
+                        <h1>First</h1>
+                        <p>Junk data to populate our carousel image</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-color: rgb(210, 206, 168);">
+                    <img src="assets/images/beforeAfter.png" alt="" style="height: 450px; width: auto;">
+                    <div class="carousel-caption">
+                        <h1>Second</h1>
+                        <p>Junk data to populate our carousel image</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-color: rgb(210, 206, 168)">
+                    <img src="assets/images/beforeAfter.png" alt="" style="height: 450px; width: auto;">
+                    <div class="carousel-caption">
+                        <h1>Third</h1>
+                        <p>Junk data to populate our carousel image</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </nav>
-    <!--Main content starts here-->
-    <!--IMPLEMENT CAROUSEL OF IMAGES HERE, ESPECIALLY THE BUSINESS LOGO FIRST SLIDE-->
+    </div>
     <!--End main content-->
 
     <!--JS imports go down here-->
