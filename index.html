@@ -13,20 +13,21 @@
         <!--Navigation bar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/company logojpg.jpg" alt="Matthew 7:25 Services"
-                        class="img-fluid" style="max-width: 150px;">
+                <a class="navbar-brand p-0" href="#">
+                    <img src="assets/images/company logojpg.jpg" alt="Matthew 7:25 Services" class="img-fluid"
+                        style="width: 250px; height: auto; ">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 18px;">Home</a>
-                        <a class="nav-link" href="#" style="font-size: 18px;">About</a>
-                        <a class="nav-link" href="#" style="font-size: 18px;">Loans</a>
-                        <a class="nav-link" href="#" style="font-size: 18px;">Contact</a>
+                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;">Home</a>
+                        <a class="nav-link" href="#about" style="font-size: 20px;">About</a>
+                        <a class="nav-link" href="#loans" style="font-size: 20px;">Loans</a>
+                        <a class="nav-link" href="#contact" style="font-size: 20px;">Contact</a>
                     </div>
                 </div>
             </div>
@@ -35,7 +36,7 @@
         <div style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
 
         <!--Carousel-->
-        <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade" style="background-color: gray;" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -44,42 +45,18 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="d-flex flex-column flex-md-row align-items-center">
-                        <img src="assets/images/beforeAfter.png" alt="" class="img-fluid" style="max-height: 600px;">
-                        <div class="card bg-light text-dark">
-                            <div class="card-body">
-                                <h1 class="card-title">First</h1>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu
-                                    lacus a sapien pulvinar commodo et nec dui. Praesent tincidunt augue vitae est
-                                    feugiat dapibus.</p>
-                            </div>
-                        </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <img src="assets/images/beforeAfter.jpg" alt="" class="img-fluid" style="height: 500px; width: auto;">
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column flex-md-row align-items-center">
-                        <img src="assets/images/beforeAfter.png" alt="" class="img-fluid" style="max-height: 600px;">
-                        <div class="card bg-light text-dark">
-                            <div class="card-body">
-                                <h1 class="card-title">Second</h1>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu
-                                    lacus a sapien pulvinar commodo et nec dui. Praesent tincidunt augue vitae est
-                                    feugiat dapibus.</p>
-                            </div>
-                        </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <img src="assets/images/beforeAfter2.jpg" alt="" class="img-fluid" style="height: 500px; width: auto;">
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column flex-md-row align-items-center">
-                        <img src="assets/images/beforeAfter.png" alt="" class="img-fluid" style="max-height: 600px;">
-                        <div class="card bg-light text-dark">
-                            <div class="card-body">
-                                <h1 class="card-title">Third</h1>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu
-                                    lacus a sapien pulvinar commodo et nec dui. Praesent tincidunt augue vitae est
-                                    feugiat dapibus.</p>
-                            </div>
-                        </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <img src="assets/images/beforeAfter3.jpg" alt="" class="img-fluid" style="height: 500px; width: auto;">
                     </div>
                 </div>
             </div>
@@ -97,13 +74,14 @@
         <div style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
 
         <!--Start of About-->
-        <div class="container">
-            <div class="card bg-light text-dark">
+        <div class="container" id="about">
+            <div class="card text-dark" style="background-color:rgba(220, 215, 150, 0.671); border: none; border-radius: 50px; margin: 50px; padding: 10px;">
                 <div class="card-body text-center">
                     <h1 class="card-title">Our Mission</h1>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu
                         lacus a sapien pulvinar commodo et nec dui. Praesent tincidunt augue vitae est feugiat dapibus.
-                        Maecenas vulputate nibh est, non consectetur mi vulputate at. In aliquam magna et dui vestibulum,
+                        Maecenas vulputate nibh est, non consectetur mi vulputate at. In aliquam magna et dui
+                        vestibulum,
                         ut iaculis purus aliquet. Vestibulum rhoncus euismod libero. Fusce sit amet aliquet sapien.
                         Curabitur at urna non arcu rutrum finibus. Curabitur posuere commodo sapien, in iaculis augue
                         mattis tincidunt. Ut faucibus non tortor quis auctor. Nam dignissim lacinia metus, sit amet
@@ -117,12 +95,21 @@
 
         <!--Start of Loans-->
         <!--Loan content goes here-->
+        <div class="container-fluid" id="loans"></div>
         <!--End of Loans-->
 
         <div style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
 
         <!--Start of Contact-->
         <!--Contact content goes here-->
+        <div class="container" id="contact">
+            <div class="card text-dark" style="border: none; border-radius: 0;">
+                <div class="card-body text-center col-12">
+                    <h1 class="card-title">Connect With Us Today</h1>
+                    <h3 class="card-body">Phone: 1-800-914-2108</h3>
+                </div>
+            </div>
+        </div>
         <!--End of Contact-->
 
     </div>
