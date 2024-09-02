@@ -8,7 +8,7 @@
     <title>Matthew 7:25 Services</title>
 </head>
 
-<body class="bg-white">
+<body style="background-color: rgb(200, 199, 199);">
     <div id="main">
         <!--Navigation bar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
@@ -24,10 +24,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;">Home</a>
-                        <a class="nav-link" href="#about" style="font-size: 20px;">About</a>
-                        <a class="nav-link" href="#loans" style="font-size: 20px;">Loans</a>
-                        <a class="nav-link" href="#contact" style="font-size: 20px;">Contact</a>
+                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 18px;">Home</a>
+                        <a class="nav-link" href="#about" style="font-size: 18px;">About</a>
+                        <a class="nav-link" href="#loans" style="font-size: 18px;">Loans</a>
+                        <a class="nav-link" href="#contact" style="font-size: 18px;">Contact</a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,8 @@
         <div style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
 
         <!--Carousel-->
-        <div id="myCarousel" class="carousel slide carousel-fade" style="background-color: gray;" data-bs-ride="carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade" style="background-color: rgb(177, 175, 175);"
+            data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -46,17 +47,20 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                        <img src="assets/images/beforeAfter.jpg" alt="" class="img-fluid" style="height: 500px; width: auto;">
+                        <img src="assets/images/beforeAfter.jpg" alt="" class="img-fluid"
+                            style="height: 500px; width: auto;">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                        <img src="assets/images/beforeAfter2.jpg" alt="" class="img-fluid" style="height: 500px; width: auto;">
+                        <img src="assets/images/beforeAfter2.jpg" alt="" class="img-fluid"
+                            style="height: 500px; width: auto;">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                        <img src="assets/images/beforeAfter3.jpg" alt="" class="img-fluid" style="height: 500px; width: auto;">
+                        <img src="assets/images/beforeAfter3.jpg" alt="" class="img-fluid"
+                            style="height: 500px; width: auto;">
                     </div>
                 </div>
             </div>
@@ -71,11 +75,12 @@
         </div>
         <!--End of carousel-->
 
-        <div style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
+        <div id="about" style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
 
         <!--Start of About-->
-        <div class="container" id="about">
-            <div class="card text-dark" style="background-color:rgba(220, 215, 150, 0.671); border: none; border-radius: 50px; margin: 50px; padding: 10px;">
+        <div class="container">
+            <div class="card text-dark"
+                style="background-color:rgba(220, 215, 150, 0.671); border: none; border-radius: 50px; margin: 50px; padding: 10px;">
                 <div class="card-body text-center">
                     <h1 class="card-title">Our Mission</h1>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu
@@ -94,19 +99,134 @@
         <div style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
 
         <!--Start of Loans-->
-        <!--Loan content goes here-->
-        <div class="container-fluid" id="loans"></div>
+        <div class="container mt-2 mb-2" id="loans">
+            <!-- Loans Title -->
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Loan Offerings</h1>
+                </div>
+            </div>
+
+            <!-- Loan content goes here -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-11">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne"
+                                    style="background-color: rgba(220, 215, 150, 0.671);">
+                                    Bridge Loans
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">90% LTV "as-is"; 90% LTC</li>
+                                        <li class="list-group-item">Up to 90% LTV on "as-is" and up to 75% ARV</li>
+                                        <li class="list-group-item">Minimum loan amount: $50K up to a maximum of $2 million</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo" style="background-color: #245388;">
+                                    Fix And Flip Loans
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body" style="background-color: white">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">90% of purchase price</li>
+                                        <li class="list-group-item">100% of rehab costs</li>
+                                        <li class="list-group-item">70% of ARV</li>
+                                        <li class="list-group-item">Credit issues not a problem</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree"
+                                    style="background-color: rgba(220, 215, 150, 0.671);">
+                                    Long-Term Rental Loans
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Approval based on cash flow, not tax returns</li>
+                                        <li class="list-group-item">Interest rates as low as 7.5%</li>
+                                        <li class="list-group-item">No experience required</li>
+                                        <li class="list-group-item">Loan amount up to $2 million</li>
+                                        <li class="list-group-item">Up to 75% LTV</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"
+                                    style="background-color: #245388;">
+                                    Construction Loans
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body" style="background-color: white">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Non-owner occupied</li>
+                                        <li class="list-group-item">Loan amounts from $100K to $3 million</li>
+                                        <li class="list-group-item">Minimum property value of $150K</li>
+                                        <li class="list-group-item">Leverage based on experience - Documented experience in the last 3 years</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive"
+                                    style="background-color: rgba(220, 215, 150, 0.671);">
+                                    Commercial Loans
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Loan amounts up to $7.5 million</li>
+                                        <li class="list-group-item">Up to 85% LTV</li>
+                                        <li class="list-group-item">1st time investors in commercial property welcome</li>
+                                        <li class="list-group-item">Property types: Apartment complexes, Multi-family, and more</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--End of Loans-->
+
 
         <div style="background-color: #245388; padding: 20px;"><!--Blue Ribbon--></div>
 
         <!--Start of Contact-->
         <!--Contact content goes here-->
         <div class="container" id="contact">
-            <div class="card text-dark" style="border: none; border-radius: 0;">
+            <div class="card text-dark" style="border: none; border-radius: 0; background-color: rgb(200, 199, 199);">
                 <div class="card-body text-center col-12">
-                    <h1 class="card-title">Connect With Us Today</h1>
-                    <h3 class="card-body">Phone: 1-800-914-2108</h3>
+                    <h2 class="card-title">Connect With Us Today</h2>
+                    <h5 class="card-body">Phone: 1-800-914-2108</h5>
                 </div>
             </div>
         </div>
