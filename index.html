@@ -21,9 +21,40 @@
         font-weight: 400;
         font-style: normal;
     }
+
+    .squeeze-modal {
+        display: none;
+        position: fixed;
+        z-index: 1050;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .squeeze-modal .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
 </style>
 
 <body style="background-color: #ffffff">
+    <!--Squeeze page-->
+    <div class="squeeze-modal d-flex" id="squeezeModal">
+        <div class="modal-content">
+            <h2>Don't Miss Out!</h2>
+            <p>Sign up for our newsletter and get the latest updates and special offers.</p>
+            <input type="email" class="form-control mb-3" placeholder="Enter your email">
+            <button class="btn btn-primary">Submit</button>
+            <button id="closeModal" class="btn btn-secondary mt-1">Maybe later</button>
+        </div>
+    </div>
+
     <div id="main">
         <!--Navigation bar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
@@ -98,8 +129,9 @@
                 style="background-color:#ffffff; border: none; border-radius: 50px; margin: 50px; padding: 10px;">
                 <div class="card-body text-center">
                     <h1 class="card-title manrope-font" style="font-size: 65px;">Our Mission</h1>
-                    <p class="card-text manrope-font"><b>Matthew 7:25- The rain fell, the rivers rose, and the winds blew
-                        and pounded that house. Yet it didn't collapse, because its foundation was on the rock.</b>
+                    <p class="card-text manrope-font"><b>Matthew 7:25- The rain fell, the rivers rose, and the winds
+                            blew
+                            and pounded that house. Yet it didn't collapse, because its foundation was on the rock.</b>
                     </p>
                     <p class="card-text manrope-font">Real estate investing can sometimes seem like your walking in
                         sand, just waiting for the next
@@ -209,11 +241,15 @@
             <div class="card text-dark manrope-font" style="border: none; border-radius: 0; background-color: #ffffff">
                 <div class="card-body text-center col-12">
                     <h2 class="card-title">Contact</h2>
-                    <div class="card col-6 offset-3 px-4">
-                        <div class="card-body row">
+                    <div class="card col-lg-6 col-md-8 col-sm-10 mx-auto px-4">
+                        <div class="card-body row gx-2">
                             <h6 class="text-dark p-2">Send us your email for special offers!</h6>
-                            <input type="email" class="form-control col" placeholder="Enter your email">
-                            <button class="btn btn-primary col-auto ms-2">Submit</button>
+                            <div class="col-12 col-md-8 mb-2 mb-md-0">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <button class="btn btn-primary w-100">Submit</button>
+                            </div>
                         </div>
                     </div>
                     <h5 class="card-body">Phone: 1-800-914-2108</h5>
@@ -221,13 +257,31 @@
             </div>
         </div>
 
+
         <!--End of Contact-->
 
     </div>
     <!--End main content-->
 
     <!--JS imports go down here-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // shows our squeeze page first thing
+        $(document).ready(function () {
+            // Show the modal on page load with fade-in
+            $('#squeezeModal').fadeIn();
+
+            // Close the modal when the button is clicked
+            $('#closeModal').click(function () {
+                $('#squeezeModal').fadeOut('slow', function () {
+                    $(this).css('display', 'none'); // Ensure no flicker by keeping it hidden
+                });
+            });
+        });
+    </script>
+
+    </script>
 </body>
 
 </html>
