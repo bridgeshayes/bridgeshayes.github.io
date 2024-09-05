@@ -67,9 +67,9 @@
     <div class="squeeze-modal" id="squeeze-page">
         <div class="modal-content">
             <h2>Don't Miss Out!</h2>
-            <p>Sign up for our newsletter and get the latest updates and special offers.</p>
-            <input type="email" class="form-control mb-3" placeholder="Enter your email">
-            <button class="btn btn-primary">Submit</button>
+            <p>Sign up today to get personalizd investment guidance from professionals</p>
+            <input id="strEmail" type="email" class="form-control mb-3" placeholder="Enter your email" required>
+            <button class="btn btn-primary" id="sendEmail">Submit</button>
             <button id="closeModal" class="btn btn-secondary mt-1">Maybe later</button>
         </div>
     </div>
@@ -284,6 +284,38 @@
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script>
+        $('#sendEmail').on('click', async function () {
+            const email = $('#strEmail').val();
+
+            if (!email) {
+                responseMessage.textContent = 'Please enter an email address.';
+                responseMessage.style.color = 'red';
+                return;
+            }
+
+            try {
+                const response = await fetch('http://18.220.210.45:3000/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email }),
+                });
+
+                if (response.ok) {
+                    responseMessage.textContent = 'Email sent successfully!';
+                    responseMessage.style.color = 'green';
+                } else {
+                    const errorData = await response.json();
+                    responseMessage.textContent = `Error: ${errorData.error || 'Failed to send email.'}`;
+                    responseMessage.style.color = 'red';
+                }
+            } catch (error) {
+                responseMessage.textContent = `Error: ${error.message}`;
+                responseMessage.style.color = 'red';
+            }
+        });
+
         // Check if the squeeze page should be shown
         window.addEventListener('load', function () {
             if (!sessionStorage.getItem('squeezePageSeen')) {
