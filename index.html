@@ -11,6 +11,86 @@
     <title>Matthew 7:25 Services</title>
 </head>
 
+<style>
+    .carousel-control-next,
+    .carousel-control-prev
+
+    /*, .carousel-indicators */
+        {
+        filter: invert(100%);
+    }
+
+    /* General Container Styling */
+    .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* Title Styling */
+    h1,
+    h2 {
+        font-family: 'Manrope', sans-serif;
+        color: #2c3e50;
+    }
+
+    /* Title Margin Adjustments */
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 1.75rem;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+    }
+
+    /* List Group Styling */
+    .list-group-item {
+        background-color: #ffffff;
+        border: none;
+        border-left: 5px solid #3498db;
+        font-size: 1.1rem;
+        padding: 15px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .list-group-item:hover {
+        background-color: #ecf0f1;
+    }
+
+    /* Responsive Margins */
+    @media (min-width: 768px) {
+        .col-12.col-md-10.col-lg-11 {
+            margin: 50px auto;
+            padding: 40px;
+        }
+    }
+
+    /* Button Styling */
+    button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Text Alignment */
+    .text-center {
+        text-align: center;
+    }
+</style>
+
 <body style="background-color: #ffffff">
 
     <div id="main">
@@ -18,7 +98,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
             <div class="container-fluid">
                 <a class="navbar-brand p-0" href="#">
-                    <img src="assets/images/company logojpg.jpg" alt="Matthew 7:25 Services" class="img-fluid"
+                    <img src="assets/images/MatthewServices.png" alt="Matthew 7:25 Services" class="img-fluid"
                         style="width: 250px; height: auto; ">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,7 +120,7 @@
         <div style="background-color: #245388; padding: 30px;"></div>
 
         <!--Carousel-->
-        <div id="myCarousel" class="carousel slide carousel-fade" style="background-color: #5e81aa77;"
+        <div id="myCarousel" class="carousel slide carousel-fade" style="background-color: #ffffff"
             data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
@@ -52,19 +132,19 @@
                 <div class="carousel-item active">
                     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
                         <img src="assets/images/beforeAfter.jpg" alt="" class="img-fluid"
-                            style="height: 500px; width: auto;">
+                            style="max-height: 500px; width: auto;">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
                         <img src="assets/images/beforeAfter2.jpg" alt="" class="img-fluid"
-                            style="height: 500px; width: auto;">
+                            style="max-height: 500px; width: auto;">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
                         <img src="assets/images/beforeAfter3.jpg" alt="" class="img-fluid"
-                            style="height: 500px; width: auto;">
+                            style="max-height: 500px; width: auto;">
                     </div>
                 </div>
             </div>
@@ -78,35 +158,44 @@
             </button>
         </div>
         <!--End of carousel-->
-
+        <div style="background-color: #245388; padding: 30px;"></div>
         <!-- <div id="about" style="background-color: #245388; padding: 30px;"></div> -->
 
         <!--Start of About-->
-        <div class="container">
-            <div class="card text-dark"
-                style="background-color:#ffffff; border: none; border-radius: 50px; margin: 50px; padding: 10px;">
+        <div>
+            <div id="about" class="card text-dark mx-3 mx-md-5 my-5"
+                style="background-color: #ffffff; border: none; border-radius: 20px; padding: 20px;">
                 <div class="card-body text-center">
-                    <h1 class="card-title manrope-font display-4 display-md-3 display-lg-2">Our Mission</h1>
-                    <p class="card-text manrope-font"><b>Matthew 7:25- The rain fell, the rivers rose, and the winds
-                            blew
-                            and pounded that house. Yet it didn't collapse, because its foundation was on the rock.</b>
+                    <h1 class="card-title manrope-font display-5 display-md-4 display-lg-2">Our Mission</h1>
+                    <p class="card-text manrope-font">
+                        <b>Matthew 7:25 - The rain fell, the rivers rose, and the winds blew and pounded that house.
+                            Yet it didn't collapse, because its foundation was on the rock.</b>
                     </p>
-                    <p class="card-text manrope-font">Real estate investing can sometimes seem like your walking in
-                        sand, just waiting for the next
-                        big wave to come in and see your dreams collapse right in front of you. I know a lot of people
-                        that have wanted to invest in real estate, and just didn't know where to turn when they couldn't
-                        get financing through their bank. They had to pass on a great real estate deal and see someone
-                        else achieve the dream that THEY wanted. Real estate investments can be a scary proposition,
-                        whether it's your first time or twentieth time down this road. Your real estate investment
-                        journey doesn't have to be a financial burden or nightmare. We here at Matthew 7:25 services
-                        want to help you succeed and reach your real estate investment goals. We are a private money
-                        broker who works hand-in-hand with a large group of private lenders. We will walk with you
-                        step-by-step through the loan process with you to help you reach your goals of being a
-                        successful and seasoned real estate investor. We have the ability to help you with all the
+                    <p class="card-text manrope-font">
+                        Real estate investing can sometimes seem like you're walking in sand, just waiting for the next
+                        big wave
+                        to come in and see your dreams collapse right in front of you. I know a lot of people who wanted
+                        to invest
+                        in real estate, but didn't know where to turn when they couldn't get financing through their
+                        bank. They
+                        had to pass on a great real estate deal and see someone else achieve the dream THEY wanted.
+                    </p>
+                    <p class="card-text manrope-font">
+                        Real estate investments can be a scary proposition, whether it's your first or twentieth time
+                        down this
+                        road. Your real estate investment journey doesn't have to be a financial burden or nightmare. We
+                        at
+                        Matthew 7:25 Services want to help you succeed and reach your real estate investment goals. We
+                        work
+                        hand-in-hand with a large group of private lenders and guide you step-by-step through the loan
+                        process to
+                        help you become a successful and seasoned real estate investor. We have the ability to provide
+                        all the
                         funding you need to see your real estate dreams come true.
                     </p>
                 </div>
             </div>
+
         </div>
         <!--End of About-->
 
@@ -115,7 +204,7 @@
         <!--Start of Loans-->
         <div class="container mt-2 mb-2" id="loans">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-11" style="margin: 50px; padding: 10px;">
+                <div class="col-12 col-md-10 col-lg-11" style="margin: 20px;">
                     <!-- Loans Title -->
                     <div class="row">
                         <div class="col text-center">
@@ -194,14 +283,14 @@
         <div style="background-color: #245388; padding: 30px;"><!--Blue Ribbon--></div>
 
         <!--Start of Contact-->
-        <div class="container" id="contact">
+        <div id="contact">
             <div class="card text-dark manrope-font" style="border: none; border-radius: 0; background-color: #ffffff">
                 <div class="card-body text-center col-12">
                     <h2 class="card-title">Contact</h2>
                     <div class="card col-lg-6 col-md-8 col-sm-10 mx-auto px-4">
                         <div class="card-body">
                             <h6 class="text-dark p-2">For special offers, email us at <a
-                                    href="mailto:Tim@Matthew725services.com">Tim@Matthew725services.com</a></h6>
+                                    href="mailto:tim@Matthew725services.com">tim@Matthew725services.com</a></h6>
                         </div>
                     </div>
                     <h5 class="card-body">Phone: 1-800-914-2108</h5>
