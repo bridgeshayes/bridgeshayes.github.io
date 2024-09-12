@@ -11,68 +11,7 @@
     <title>Matthew 7:25 Services</title>
 </head>
 
-<style>
-    /* <uniquifier>: Use a unique and descriptive class name
-    <weight>: Use a value from 200 to 800 */
-
-    .manrope-font {
-        font-family: "Manrope", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    /* Overlay background for focusing on the modal */
-    .squeeze-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        /* Darker background */
-        z-index: 999;
-        /* Below the modal */
-    }
-
-    .squeeze-modal {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-        height: 400px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.736);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        text-align: center;
-    }
-
-    .squeeze-modal .modal-content {
-        background-color: #fff;
-        padding: 20px;
-        text-align: center;
-        border-radius: 10px;
-    }
-</style>
-
 <body style="background-color: #ffffff">
-    <!--Squeeze page-->
-    <div class="squeeze-overlay" id="squeeze-overlay"></div> <!-- Dark background overlay -->
-
-    <div class="squeeze-modal" id="squeeze-page">
-        <div class="modal-content">
-            <h2>Don't Miss Out!</h2>
-            <p>Sign up today to get personalizd investment guidance from professionals</p>
-            <input id="strEmail" type="email" class="form-control mb-3" placeholder="Enter your email" required>
-            <button class="btn btn-primary" id="sendEmail">Submit</button>
-            <button id="closeModal" class="btn btn-secondary mt-1">Maybe later</button>
-        </div>
-    </div>
 
     <div id="main">
         <!--Navigation bar-->
@@ -147,7 +86,7 @@
             <div class="card text-dark"
                 style="background-color:#ffffff; border: none; border-radius: 50px; margin: 50px; padding: 10px;">
                 <div class="card-body text-center">
-                    <h1 class="card-title manrope-font" style="font-size: 65px;">Our Mission</h1>
+                    <h1 class="card-title manrope-font display-4 display-md-3 display-lg-2">Our Mission</h1>
                     <p class="card-text manrope-font"><b>Matthew 7:25- The rain fell, the rivers rose, and the winds
                             blew
                             and pounded that house. Yet it didn't collapse, because its foundation was on the rock.</b>
@@ -180,7 +119,7 @@
                     <!-- Loans Title -->
                     <div class="row">
                         <div class="col text-center">
-                            <h1 class="manrope-font" style="font-size: 65px;">Loan Offerings</h1>
+                            <h1 class="manrope-font display-4 display-md-3 display-lg-2">Loan Offerings</h1>
                         </div>
                     </div>
                     <!-- Bridge Loans Section -->
@@ -255,20 +194,14 @@
         <div style="background-color: #245388; padding: 30px;"><!--Blue Ribbon--></div>
 
         <!--Start of Contact-->
-        <!--Contact content goes here-->
         <div class="container" id="contact">
             <div class="card text-dark manrope-font" style="border: none; border-radius: 0; background-color: #ffffff">
                 <div class="card-body text-center col-12">
                     <h2 class="card-title">Contact</h2>
                     <div class="card col-lg-6 col-md-8 col-sm-10 mx-auto px-4">
-                        <div class="card-body row gx-2">
-                            <h6 class="text-dark p-2">Send us your email for special offers!</h6>
-                            <div class="col-12 col-md-8 mb-2 mb-md-0">
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <button class="btn btn-primary w-100">Submit</button>
-                            </div>
+                        <div class="card-body">
+                            <h6 class="text-dark p-2">For special offers, email us at <a
+                                    href="mailto:Tim@Matthew725services.com">Tim@Matthew725services.com</a></h6>
                         </div>
                     </div>
                     <h5 class="card-body">Phone: 1-800-914-2108</h5>
@@ -277,65 +210,13 @@
         </div>
         <!--End of Contact-->
 
+
     </div>
     <!--End main content-->
 
     <!--JS imports go down here-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $('#sendEmail').on('click', async function () {
-            const email = $('#strEmail').val();
-
-            if (!email) {
-                responseMessage.textContent = 'Please enter an email address.';
-                responseMessage.style.color = 'red';
-                return;
-            }
-
-            try {
-                const response = await fetch('http://18.220.210.45:3000/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email }),
-                });
-
-                if (response.ok) {
-                    responseMessage.textContent = 'Email sent successfully!';
-                    responseMessage.style.color = 'green';
-                } else {
-                    const errorData = await response.json();
-                    responseMessage.textContent = `Error: ${errorData.error || 'Failed to send email.'}`;
-                    responseMessage.style.color = 'red';
-                }
-            } catch (error) {
-                responseMessage.textContent = `Error: ${error.message}`;
-                responseMessage.style.color = 'red';
-            }
-        });
-
-        // Check if the squeeze page should be shown
-        window.addEventListener('load', function () {
-            if (!sessionStorage.getItem('squeezePageSeen')) {
-                document.getElementById('squeeze-page').style.display = 'flex';
-                document.getElementById('squeeze-overlay').style.display = 'block';
-            } else {
-                document.getElementById('squeeze-page').style.display = 'none';
-                document.getElementById('squeeze-overlay').style.display = 'none';
-            }
-        });
-
-        // Hide the squeeze page and overlay, and set a flag in sessionStorage
-        document.getElementById('closeModal').addEventListener('click', function () {
-            sessionStorage.setItem('squeezePageSeen', 'true');
-            document.getElementById('squeeze-page').style.display = 'none';
-            document.getElementById('squeeze-overlay').style.display = 'none';
-        });
-    </script>
-
-    </script>
 </body>
 
 </html>
